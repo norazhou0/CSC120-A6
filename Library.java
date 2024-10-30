@@ -4,13 +4,22 @@ public class Library extends Building {
 
   private Hashtable<String, Boolean> collection; 
 
-  /** Constructor */
+  /** 
+   * Constructor for Library
+   * @param name of the library
+   * @param address of the library
+   * @param nFloors number of floors
+  */
   public Library(String name, String address, int nFloors) {
     super(name, address, nFloors);
     this.collection = new Hashtable<>();
     System.out.println("You have built a library: 📖");
   }
-  
+
+  /**
+   * Method to add books to the collection
+   * @param title of the book
+   */
   public void addTitle(String title) {
     // check if the book exists
     if (this.collection.containsKey(title)) {
@@ -21,6 +30,11 @@ public class Library extends Building {
     System.out.println("The book " + title + " has been added to " + this.name + ".");
   }
 
+  /**
+   * Method to remove books from the collection
+   * @param title of the book
+   * @return the book got removed
+   */
   public String removeTitle(String title) {
     // check if the book doesn't exist
     if (!this.collection.containsKey(title)) {
@@ -29,10 +43,13 @@ public class Library extends Building {
     // proceed if exists
     this.collection.remove(title);
     System.out.println("The book " + title + " has been removed from " + this.name + ".");
-    // return the title that we removed
     return title;
   }
 
+  /**
+   * Method to check out books
+   * @param title of the book
+   */
   public void checkOut(String title) {
     // check if the book doesn't exist
     if (!this.collection.containsKey(title)) {
@@ -47,6 +64,10 @@ public class Library extends Building {
     System.out.println("The book " + title + " has been successfully checked out from " + this.name + ".");
   }
 
+  /**
+   * Method to return books
+   * @param title of the book
+   */
   public void returnBook(String title) {
     // check if the book doesn't exist
     if (!this.collection.containsKey(title)) {
@@ -61,11 +82,19 @@ public class Library extends Building {
     System.out.println("The book " + title + " has been successfully returned to " + this.name + ".");
   }
 
+  /**
+   * Method to check if the collection contains the book
+   * @return if the collection contains the book
+   */
   public boolean containsTitle(String title) {
     // returns true if the title appears as a key in the Libary's collection, false otherwise
     return this.collection.containsKey(title);
   }
 
+  /**
+   * Method to check if the book is available 
+   * @return if the book is abailable
+   */
   public boolean isAvailable(String title) {
     // check if the book doesn't exist
     if (!this.collection.containsKey(title)) {
@@ -75,6 +104,9 @@ public class Library extends Building {
     return this.collection.get(title);
   }
 
+  /**
+   * Method for printing out the collection
+   */
   public void printCollection() {
     // prints out the entire collection in an easy-to-read way (including checkout status)
     System.out.println("The collection in " + this.name + ":");

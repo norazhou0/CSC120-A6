@@ -5,7 +5,13 @@ public class House extends Building {
   private ArrayList<String> residents;
   private boolean hasDiningRoom;
 
-  /** Constructor */
+  /** 
+   * Constructor for House
+   * @param name of the house
+   * @param address of the house
+   * @param nFloors number of floors
+   * @param hasDiningRoom or not
+  */
   public House(String name, String address, int nFloors, boolean hasDiningRoom) {
     super(name, address, nFloors);
     this.residents = new ArrayList<>();
@@ -29,6 +35,10 @@ public class House extends Building {
     return this.residents.size();
   }
 
+  /**
+   * Method for house residents move-in
+   * @param name of the residents in the house
+   */
   public void moveIn(String name) {
     // check if already a resident
     if (this.residents.contains(name)) {
@@ -40,6 +50,11 @@ public class House extends Building {
     System.out.println(this.name + " has " + this.nResidents() + " resident(s).");
   }
 
+  /**
+   * Method for house residents move-out
+   * @param name of the residents in the house
+   * @return name of the resident who moved out
+   */
   public String moveOut(String name) {
     // check if not in the house
     if (!this.residents.contains(name)){
@@ -49,10 +64,14 @@ public class House extends Building {
     this.residents.remove(name);
     System.out.println(name + " has moved out house " + this.name + ".");
     System.out.println(this.name + " has " + this.nResidents() + " resident(s).");
-    // return the name of the person who moved out
     return name;
   }
 
+  /**
+   * Method for checking if the person is a resident
+   * @param  person
+   * @return if the person is a resident
+   */
   public boolean isResident(String person) {
     return this.residents.contains(person);
     }
