@@ -19,15 +19,11 @@ public class House extends Building {
     System.out.println("You have built a house: 🏠");
   }
 
-  /**
-   * Getter for hasDiningRoom
-   * @return whether the house has a dining room
-   */
   public boolean hasDiningRoom() {
     return this.hasDiningRoom;
   }
 
-  /*
+  /** 
    * Getter for nResidents
    * @return the number of residents
    */

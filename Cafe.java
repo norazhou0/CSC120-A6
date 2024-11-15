@@ -9,11 +9,11 @@ public class Cafe extends Building {
      * Constructor for Cafe
      * @param name of the cafe
      * @param address of the cafe
-     * @param nFloors number of cafe
-     * @param nCoffeeounces the number of ounces of coffee remaining in inventory
-     * @param nSugarPackets the number of sugar packets remaining in inventory
-     * @param nCreams the number of "splashes" of cream remaining in inventory
-     * @param nCups the number of cups remaining in inventory
+     * @param nFloors number of floors of the cafe
+     * @param nCoffeeOunces number of ounces of coffee remaining in inventory
+     * @param nSugarPackets number of sugar packets remaining in inventory
+     * @param nCreams number of "splashes" of cream remaining in inventory
+     * @param nCups number of cups remaining in inventory
      */
     public Cafe(String name, String address, int nFloors, int nCoffeeOunces, int nSugarPackets, int nCreams, int nCups) {
       super(name, address, nFloors);
@@ -24,7 +24,7 @@ public class Cafe extends Building {
       System.out.println("You have built a cafe: ☕");
     }
     
-    /*
+    /** 
      * Method for selling coffee
      * @param size needed
      * @param the number of sugar packets needed
@@ -45,7 +45,7 @@ public class Cafe extends Building {
       System.out.println("Coffee: " + this.nCoffeeOunces + " oz, Sugar: " + this.nSugarPackets + " packet(s), Cream: " + this.nCreams + ", Cup(s): " + this.nCups);
     }
     
-    /*
+    /** 
      * Method for restocking
      * @param the number of ounces of coffee for restocking
      * @param the number of sugar packets for restocking
@@ -62,11 +62,11 @@ public class Cafe extends Building {
     }
   
     public static void main(String[] args) {
-      Cafe SmithCafe = new Cafe("Compass", "7 Neilson Drive", 1, 100, 50, 50, 15);
-      SmithCafe.sellCoffee(50, 25, 25);
-      SmithCafe.sellCoffee(50, 25, 25);
-      SmithCafe.sellCoffee(50, 25, 25);
-      SmithCafe.sellCoffee(200, 100, 100);
+      Cafe smithCafe = new Cafe("Compass", "7 Neilson Drive", 1, 100, 50, 50, 15);
+      smithCafe.sellCoffee(50, 25, 25);
+      smithCafe.sellCoffee(50, 25, 25);
+      smithCafe.sellCoffee(50, 25, 25);
+      smithCafe.sellCoffee(200, 100, 100);
     }
   
   }

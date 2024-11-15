@@ -112,7 +112,7 @@ public class Library extends Building {
     System.out.println("The collection in " + this.name + ":");
     for (String title : this.collection.keySet()) {
       boolean isAvailable = this.collection.get(title);
-      System.out.println("-" + title + ":" + isAvailable);
+      System.out.println("-" + title + "; " + "Available: " + isAvailable);
     }
   }
 
