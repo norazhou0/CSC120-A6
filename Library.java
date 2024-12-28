@@ -84,6 +84,7 @@ public class Library extends Building {
 
   /**
    * Method to check if the collection contains the book
+   * @param title of the book
    * @return if the collection contains the book
    */
   public boolean containsTitle(String title) {
